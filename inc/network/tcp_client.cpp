@@ -16,7 +16,7 @@ TcpClient::TcpClient(const std::string& host, const uint16_t& port)
 }
 
 int
-TcpClient::connect()
+TcpClient::connect(std::function<void(TcpClient&, redisclient::Reply&)> reply_handler)
 {
     socket();
     if (inet_pton(AF_INET, host_, &servaddr_.sin_addr) <= 0)

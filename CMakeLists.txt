@@ -3,5 +3,5 @@ project(RedisClient)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-set(SOURCE_FILES main.cpp inc/network/tcp_client.h inc/network/tcp_client.cpp inc/err.h inc/RedisClient.h src/RedisClient.cpp)
+set(SOURCE_FILES main.cpp inc/network/tcp_client.h inc/network/tcp_client.cpp inc/err.h inc/RedisClient.h src/RedisClient.cpp inc/Reply.h)
 add_executable(RedisClient ${SOURCE_FILES})

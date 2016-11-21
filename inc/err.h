@@ -20,4 +20,11 @@ err_log(const char* message, const char* arg= nullptr)
 {
     std::clog << message << arg << endl;
 }
+
+bool
+err_ret_bool(const char* message, const char* arg = nullptr, bool ret = false)
+{
+    err_log(message, arg);
+    return ret;
+}
 #endif //REDISCLIENT_ERR_H
